@@ -23,7 +23,7 @@ export const getAccountInfo = async (accountPublicKey) => {
         }, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${SOLANA_API_KEY}` // If needed
+                'Authorization': `Bearer ${SOLANA_API_KEY}`
             }
         });
 
@@ -39,7 +39,7 @@ export const getAccountInfo = async (accountPublicKey) => {
 };
 export const processUPIPayment = async (amount, currency) => {
     try {
-        const solPrice = await getSolanaPrice(); // Use getSolanaPrice
+        const solPrice = await getSolanaPrice();
         const convertedAmount = await convertCurrency(amount, currency, 'SOL');
         return { message: 'UPI payment successful', solAmount: convertedAmount };
     } catch (error) {
@@ -50,7 +50,7 @@ export const processUPIPayment = async (amount, currency) => {
 
 export const processCardPayment = async (amount, currency) => {
     try {
-        const solPrice = await getSolanaPrice(); // Use getSolanaPrice
+        const solPrice = await getSolanaPrice();
         const convertedAmount = await convertCurrency(amount, currency, 'SOL');
         return { message: 'Card payment successful', solAmount: convertedAmount };
     } catch (error) {

@@ -1,6 +1,6 @@
-import axios from 'axios'; // Ensure you have installed axios with `npm install axios`
+import axios from 'axios';
 
-const API_URL = 'https://api.coingecko.com/api/v3/simple/price'; // Example API endpoint
+const API_URL = 'https://api.coingecko.com/api/v3/simple/price';
 
 /**
  * Fetches the current price of Solana (SOL) in USD.
