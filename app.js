@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 import paymentRoutes from './routes/paymentRoutes.js';
-// import 'dotenv/config'; // This automatically loads environment variables from a .env file
+
 import { getAccountInfo } from './services/solanaService.js';
 import { accountPublicKey } from './config.js';
 
